@@ -7,10 +7,15 @@ package lec02
 // NOTE 런타임단에서는 오류안뜨고 돌려보고나서 nullPointException
 
 fun main() {
-    val p1 = Person(null)
+    val p1 = Person(null, null)
     println(p1.name?.length ?: "이름없대ㅡㅡ")
 }
 
-class Person(name :String?) {
+class Person(name :String?, age :Int?) {
     val name = name
+    val age = age
+}
+
+class Animal(nickName : String?) {
+    val nickName = nickName
 }
